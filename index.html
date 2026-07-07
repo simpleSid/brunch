@@ -124,16 +124,75 @@
       </section>
 
       <section id="atmosphere" class="atmosphere section-pad">
-        <div class="photo-mosaic reveal" aria-label="Фотографии интерьера Brunch">
-          <figure class="mosaic-large">
-            <img src="assets/interior-hall.png" alt="Зал Brunch с пудровыми диванами и люстрой" loading="lazy" />
-          </figure>
-          <figure>
-            <img src="assets/interior-table.png" alt="Стол Brunch, цветочные кресла и фактурная стена" loading="lazy" />
-          </figure>
-          <figure>
-            <img src="assets/interior-window.png" alt="Стол у окна в Brunch с люстрой и зелеными рамами" loading="lazy" />
-          </figure>
+        <div class="photo-gallery reveal" data-gallery aria-label="Галерея интерьера Brunch">
+          <div class="gallery-frame">
+            <figure class="gallery-main">
+              <div class="gallery-card" data-gallery-card="0">
+                <img
+                  class="gallery-card-front"
+                  data-gallery-front
+                  src="photos/interior_photos/interior_001_source_003.jpg"
+                  alt="Круглый стол, цветочные кресла и растения в зале Brunch"
+                  loading="lazy"
+                />
+                <img
+                  class="gallery-card-back"
+                  data-gallery-back
+                  src="photos/interior_photos/interior_002_source_006.jpg"
+                  alt=""
+                  aria-hidden="true"
+                  loading="lazy"
+                />
+              </div>
+            </figure>
+            <figure class="gallery-side">
+              <div class="gallery-card" data-gallery-card="1">
+                <img
+                  class="gallery-card-front"
+                  data-gallery-front
+                  src="photos/interior_photos/interior_002_source_006.jpg"
+                  alt="Фактурная стена с логотипом Brunch и столиком"
+                  loading="lazy"
+                />
+                <img
+                  class="gallery-card-back"
+                  data-gallery-back
+                  src="photos/interior_photos/interior_003_source_011.jpg"
+                  alt=""
+                  aria-hidden="true"
+                  loading="lazy"
+                />
+              </div>
+            </figure>
+            <figure class="gallery-side">
+              <div class="gallery-card" data-gallery-card="2">
+                <img
+                  class="gallery-card-front"
+                  data-gallery-front
+                  src="photos/interior_photos/interior_003_source_011.jpg"
+                  alt="Стол у окна с люстрой и видом из зала Brunch"
+                  loading="lazy"
+                />
+                <img
+                  class="gallery-card-back"
+                  data-gallery-back
+                  src="photos/interior_photos/interior_004_source_012.jpg"
+                  alt=""
+                  aria-hidden="true"
+                  loading="lazy"
+                />
+              </div>
+            </figure>
+          </div>
+          <div class="gallery-controls" aria-label="Управление галереей">
+            <button class="gallery-arrow gallery-arrow-prev" type="button" data-gallery-prev aria-label="Предыдущее фото">
+              <span aria-hidden="true">‹</span>
+            </button>
+            <div class="gallery-dots" data-gallery-dots aria-label="Выбор фото"></div>
+            <button class="gallery-arrow gallery-arrow-next" type="button" data-gallery-next aria-label="Следующее фото">
+              <span aria-hidden="true">›</span>
+            </button>
+          </div>
         </div>
         <div class="atmosphere-copy reveal">
           <h2>Цветочная арка, фарфор и пудровый зал</h2>

@@ -14,6 +14,8 @@
   --wood: #8b5e3c;
   --shadow: 0 24px 80px rgba(73, 52, 33, 0.16);
   --radius: 8px;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
   --font-body: Arial, Helvetica, sans-serif;
   --font-display: Georgia, "Times New Roman", serif;
 }
@@ -388,28 +390,148 @@ p {
   gap: clamp(30px, 6vw, 82px);
 }
 
-.photo-mosaic {
+.photo-gallery {
+  position: relative;
+  min-width: 0;
+}
+
+.gallery-frame {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   grid-template-rows: 260px 260px;
   gap: 14px;
 }
 
-.photo-mosaic figure {
+.gallery-frame figure {
+  position: relative;
   margin: 0;
   overflow: hidden;
   border-radius: var(--radius);
   box-shadow: 0 18px 52px rgba(73, 52, 33, 0.12);
+  background: transparent;
+  isolation: isolate;
+  perspective: 1400px;
 }
 
-.photo-mosaic .mosaic-large {
+.gallery-main {
   grid-row: span 2;
 }
 
-.photo-mosaic img {
+.gallery-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 1640ms var(--ease-out-expo);
+}
+
+.gallery-card img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.gallery-card-front {
+  transform: rotateY(0deg);
+}
+
+.gallery-card-back {
+  transform: rotateY(180deg);
+}
+
+.gallery-frame figure::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(120deg, rgba(255, 250, 241, 0.16), transparent 38%),
+    linear-gradient(180deg, transparent 64%, rgba(24, 53, 39, 0.2));
+  opacity: 0;
+  transition: opacity 260ms ease;
+}
+
+.gallery-frame figure:hover::after {
+  opacity: 1;
+}
+
+.gallery-controls {
+  width: min(460px, 100%);
+  margin: 18px auto 0;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 12px;
+}
+
+.gallery-arrow,
+.gallery-dot {
+  border: 1px solid color-mix(in srgb, var(--green-strong) 26%, transparent);
+  color: var(--paper-soft);
+  background: color-mix(in srgb, var(--green-strong) 88%, var(--surface));
+  box-shadow: 0 12px 32px rgba(24, 53, 39, 0.16);
+  cursor: pointer;
+  transition:
+    transform 180ms var(--ease-out-quart),
+    background-color 180ms ease,
+    border-color 180ms ease,
+    opacity 180ms ease;
+}
+
+.gallery-arrow {
+  display: inline-grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border-radius: 999px;
+  font-family: var(--font-display);
+}
+
+.gallery-arrow span {
+  display: block;
+  margin-top: -3px;
+  font-size: 2.35rem;
+  line-height: 1;
+}
+
+.gallery-arrow:hover,
+.gallery-arrow:focus-visible,
+.gallery-dot:hover,
+.gallery-dot:focus-visible {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--green-strong) 62%, transparent);
+  background: var(--green-strong);
+}
+
+.gallery-arrow:active,
+.gallery-dot:active {
+  transform: translateY(1px);
+}
+
+.gallery-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.gallery-dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border-radius: 999px;
+  opacity: 0.42;
+}
+
+.gallery-dot.is-active {
+  width: 28px;
+  opacity: 1;
+  background: var(--green-strong);
+  border-color: var(--green-strong);
 }
 
 .detail-list {
@@ -838,13 +960,22 @@ cite {
     grid-template-columns: 1fr;
   }
 
-  .photo-mosaic {
+  .gallery-frame {
     grid-template-columns: 1fr;
     grid-template-rows: 360px 250px 250px;
   }
 
-  .photo-mosaic .mosaic-large {
+  .gallery-main {
     grid-row: auto;
+  }
+
+  .gallery-controls {
+    margin-top: 14px;
+  }
+
+  .gallery-arrow {
+    width: 44px;
+    height: 44px;
   }
 
   .menu-note {
