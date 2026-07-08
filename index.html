@@ -64,41 +64,48 @@
     </header>
 
     <main id="top">
-      <section class="hero section-pad">
-        <div class="hero-copy reveal">
-          <div class="hero-logo">
-            <img src="assets/brunch-logo.png" alt="Фирменный знак Brunch" />
+      <section class="hero-scroll" data-scroll-video data-frame-count="440" aria-label="Brunch, вход и интерьер">
+        <div class="hero-sticky">
+          <canvas class="hero-sequence" data-scroll-video-canvas width="1600" height="918" aria-hidden="true"></canvas>
+          <div class="hero-scrim" aria-hidden="true"></div>
+          <div class="hero section-pad">
+            <div class="hero-copy">
+              <div class="hero-logo">
+                <img src="assets/brunch-logo.png" alt="Фирменный знак Brunch" />
+              </div>
+              <h1>Кофе, встречи и спокойные паузы</h1>
+              <p>
+                Кафе на Войстроченко, 5. Для десертов, кофе и разговоров, которые не хочется заканчивать.
+              </p>
+              <p class="hero-hours">Ежедневно 09:00-22:00</p>
+              <div class="hero-actions" aria-label="Быстрые действия">
+                <a class="button button-primary" href="https://yandex.ru/maps/?rtext=~53.268286%2C34.337407&rtt=auto">Маршрут</a>
+                <a class="button button-secondary" href="#menu">Меню</a>
+              </div>
+            </div>
+            <div class="hero-media">
+              <img
+                src="assets/entrance-flowers.png"
+                alt="Вход в Brunch с розовой цветочной аркой"
+                fetchpriority="high"
+              />
+            </div>
           </div>
-          <h1>Завтраки весь день</h1>
-          <p>
-            Кафе на Войстроченко, 5 с пудровым залом, фарфором, кофе с собой и меню для длинных встреч.
-          </p>
-          <div class="hero-actions" aria-label="Быстрые действия">
-            <a class="button button-primary" href="https://yandex.ru/maps/?rtext=~53.268286%2C34.337407&rtt=auto">Маршрут</a>
-            <a class="button button-secondary" href="#menu">Меню</a>
-          </div>
-        </div>
-        <div class="hero-media reveal">
-          <img
-            src="assets/entrance-flowers.png"
-            alt="Вход в Brunch с розовой цветочной аркой"
-            fetchpriority="high"
-          />
         </div>
       </section>
 
       <section class="proof-strip reveal" aria-label="Коротко о кафе">
         <div>
           <strong>4.6</strong>
-          <span>на Yandex Maps</span>
+          <span>на Яндекс Картах</span>
         </div>
         <div>
-          <strong>102</strong>
-          <span>отзыва</span>
+          <strong>> 100</strong>
+          <span>отзывов</span>
         </div>
         <div>
-          <strong>09:00-22:00</strong>
-          <span>ежедневно</span>
+          <strong>весь день</strong>
+          <span>завтраки</span>
         </div>
         <div>
           <strong>2026</strong>
@@ -108,16 +115,16 @@
 
       <section class="intro section-pad">
         <div class="intro-text reveal">
-          <h2>Завтрак здесь не заканчивается утром</h2>
+          <h2>Место для встреч, кофе и спокойных пауз</h2>
           <p>
-            В Brunch приходят за сырниками, тостами, кофе, спокойной работой у окна и встречами, которые не хочется сокращать.
+            В Brunch приходят за кофе, десертами, спокойной работой у окна и встречами, которые не хочется сокращать.
           </p>
         </div>
         <div class="reason-grid reveal" aria-label="Причины прийти в Brunch">
-          <span>завтраки весь день</span>
+          <span>уютный зал</span>
           <span>кофе с собой</span>
           <span>можно с питомцем</span>
-          <span>Wi-Fi и ноутбук</span>
+          <span>Wi-Fi</span>
           <span>летняя терраса</span>
           <span>подарочные сертификаты</span>
         </div>
@@ -195,30 +202,35 @@
           </div>
         </div>
         <div class="atmosphere-copy reveal">
-          <h2>Цветочная арка, фарфор и пудровый зал</h2>
+          <h2>Пудровый зал, цветы и мягкий свет</h2>
           <p>
-            Интерьер держится на мягком розовом, темно-зеленых рамах, черно-белой плитке, деревянных столах и классических люстрах.
+            Внутри - фактурные светлые стены, мягкие кресла, букеты на столах и теплый свет люстр. Здесь легко сесть у окна, заказать кофе и никуда не спешить.
           </p>
           <ul class="detail-list">
-            <li>розовая мягкая мебель</li>
-            <li>цветы на столах</li>
-            <li>открытая кухня</li>
-            <li>детское меню</li>
+            <li>столики у окна</li>
+            <li>живые букеты</li>
+            <li>мягкие кресла</li>
+            <li>теплый свет</li>
           </ul>
         </div>
       </section>
 
       <section id="menu" class="menu-section section-pad">
         <div class="section-heading reveal">
-          <h2>Полное меню Brunch</h2>
+          <h2>Меню</h2>
           <p>
-            Завтраки весь день, большой завтрак-конструктор, закуски, салаты, супы, горячее, десерты, чай и барная карта.
+            В меню - легкие закуски, салаты, горячие блюда, десерты, кофе, чай и барная карта для неспешного визита в любое время дня.
           </p>
         </div>
         <div class="menu-layout">
           <aside class="menu-note reveal">
-            <img src="assets/brunch-logo.png" alt="Логотип Brunch на фирменной фактуре" loading="lazy" />
-            <p>Цены указаны по материалам кафе. В напитках с безлактозным и альтернативным молоком стоимость показана в строке позиции.</p>
+            <img
+              src="photos/menu-brunch-cover.png"
+              alt="Бранч-сет на светлой каменной поверхности"
+              width="1254"
+              height="1254"
+              loading="lazy"
+            />
             <nav class="menu-jump" aria-label="Разделы меню">
               <a href="#menu-breakfast">Завтраки</a>
               <a href="#menu-builder">Конструктор</a>
@@ -231,7 +243,7 @@
               <a href="#menu-bar">Бар</a>
             </nav>
           </aside>
-          <div class="menu-panel reveal">
+          <div class="menu-panel">
             <section id="menu-breakfast" class="menu-category">
               <h3>Завтраки весь день</h3>
               <ul class="menu-list">
@@ -454,17 +466,17 @@
 
       <section class="scenarios section-pad">
         <div class="scenario-card reveal">
-          <h2>Для бранча, встречи, ноутбука и прогулки с собакой</h2>
+          <h2>Для подруг, свиданий, цветов и десертов</h2>
           <p>
-            Brunch подходит для длинного завтрака, кофе перед делами, десерта после прогулки и тихой работы у окна.
+            Brunch подходит для неспешной встречи, красивого кофе, десерта после прогулки и вечера в мягкой уютной атмосфере.
           </p>
         </div>
         <div class="scenario-rail reveal" aria-label="Сценарии визита">
-          <span>Завтрак весь день</span>
-          <span>Бранч с семьей</span>
+          <span>Встреча с подругой</span>
+          <span>Свидание вечером</span>
           <span>Кофе с собой</span>
-          <span>Работа с ноутбуком</span>
-          <span>Встреча с питомцем</span>
+          <span>Фото у цветов</span>
+          <span>Можно с питомцем</span>
           <span>Десерт и чай</span>
         </div>
       </section>
@@ -473,21 +485,21 @@
         <div class="section-heading reveal">
           <h2>Гости отмечают еду, атмосферу и интерьер</h2>
           <p>
-            В карточке Brunch: 185 оценок, 102 отзыва и отметка "Хорошее место 2026".
+            Вкуснуая еда, уютный зал, красивая подача и внимательное обслуживание.
           </p>
         </div>
         <div class="review-stack reveal" aria-label="Отзывы гостей">
           <blockquote>
             <p>"Кофе стабильно хороший, сотрудники дружелюбные."</p>
-            <cite>Гость Yandex Maps</cite>
+            <cite>Денис, отзыв на Яндекс Картах</cite>
           </blockquote>
           <blockquote>
             <p>"Уютненький интерьер, классное меню, очень вкусно и адекватные цены."</p>
-            <cite>Гость Yandex Maps</cite>
+            <cite>Екатерина, отзыв на Яндекс Картах</cite>
           </blockquote>
           <blockquote>
             <p>"Очень красивое место. Вкусно, в красивой посуде."</p>
-            <cite>Гость Yandex Maps</cite>
+            <cite>Мария, отзыв на Яндекс Картах</cite>
           </blockquote>
         </div>
       </section>
@@ -538,7 +550,6 @@
 
     <footer class="footer">
       <span>Brunch, Брянск</span>
-      <a href="https://brunch-ulitsa-imeni-af-vojstrochenko.clients.site/">Сайт владельца</a>
     </footer>
   </body>
 </html>

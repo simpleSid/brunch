@@ -2,6 +2,17 @@ import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 const html = readFileSync(resolve("index.html"), "utf8");
+const menuPanelMatch = html.match(/<div class="([^"]*\bmenu-panel\b[^"]*)">/);
+
+if (!menuPanelMatch) {
+  console.error("Menu panel is missing.");
+  process.exit(1);
+}
+
+if (menuPanelMatch[1].split(/\s+/).includes("reveal")) {
+  console.error("Menu panel must not be hidden behind a reveal animation.");
+  process.exit(1);
+}
 
 const requiredSections = [
   "Завтраки весь день",
