@@ -233,7 +233,6 @@ a {
 .scenarios,
 .reviews,
 .contacts,
-.final-cta,
 .footer {
   width: 100%;
   min-width: 0;
@@ -424,8 +423,7 @@ p {
 .section-heading p,
 .atmosphere-copy p,
 .scenario-card p,
-.contact-panel p,
-.final-inner p {
+.contact-panel p {
   max-width: 660px;
   margin-top: 22px;
 }
@@ -921,39 +919,6 @@ cite {
   font-family: var(--font-display);
   font-size: clamp(1.9rem, 3.4vw, 3.2rem);
   line-height: 0.95;
-}
-
-.final-cta {
-  padding-top: clamp(56px, 8vw, 100px);
-}
-
-.final-inner {
-  display: grid;
-  justify-items: center;
-  text-align: center;
-  padding: clamp(36px, 7vw, 76px);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background:
-    linear-gradient(135deg, rgba(217, 163, 161, 0.24), transparent 34%),
-    var(--surface);
-  box-shadow: var(--shadow);
-}
-
-.final-inner img {
-  width: min(270px, 70vw);
-  aspect-ratio: 2.6 / 1;
-  object-fit: cover;
-  object-position: center;
-  margin-bottom: 28px;
-  overflow: hidden;
-  border-radius: var(--radius);
-  border: 1px solid var(--line);
-}
-
-.final-inner p {
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .footer {
