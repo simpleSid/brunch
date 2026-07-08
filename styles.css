@@ -64,7 +64,7 @@ body::before {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  background-image: url("assets/brunch-logo.png");
+  background-image: url("assets/brand/brunch-logo.png");
   background-size: 720px 720px;
   background-position: 80% -180px;
   background-repeat: no-repeat;
@@ -908,7 +908,7 @@ cite {
   color: #dcefdc;
   background:
     linear-gradient(180deg, rgba(24, 53, 39, 0.02), rgba(24, 53, 39, 0.58)),
-    url("photos/contact-background.png") center / cover;
+    url("photos/generated/contact-background.png") center / cover;
   box-shadow: var(--shadow);
 }
 

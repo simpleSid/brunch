@@ -31,7 +31,7 @@ function initScrollVideo(section) {
   const canvas = section.querySelector("[data-scroll-video-canvas]");
   const context = canvas?.getContext("2d", { alpha: false });
   const frameCount = Number(section.dataset.frameCount) || 440;
-  const framePath = (index) => `dev/video/frames/brunch_${String(index + 1).padStart(4, "0")}.avif`;
+  const framePath = (index) => `assets/hero/frames/brunch_${String(index + 1).padStart(4, "0")}.avif`;
   const cache = new Map();
   let requestedFrame = prefersReducedMotion ? frameCount - 1 : 0;
   let currentImage = null;
@@ -191,35 +191,35 @@ function initScrollVideo(section) {
 if (gallery) {
   const slides = [
     {
-      src: "photos/interior_photos/interior_001_source_003.jpg",
+      src: "photos/interior/interior_001_source_003.jpg",
       alt: "Круглый стол, цветочные кресла и растения в зале Brunch",
     },
     {
-      src: "photos/interior_photos/interior_002_source_006.jpg",
+      src: "photos/interior/interior_002_source_006.jpg",
       alt: "Фактурная стена с логотипом Brunch и столиком",
     },
     {
-      src: "photos/interior_photos/interior_003_source_011.jpg",
+      src: "photos/interior/interior_003_source_011.jpg",
       alt: "Стол у окна с люстрой и видом из зала Brunch",
     },
     {
-      src: "photos/interior_photos/interior_004_source_012.jpg",
+      src: "photos/interior/interior_004_source_012.jpg",
       alt: "Пудровый диван, зеркала и черно-белая плитка в Brunch",
     },
     {
-      src: "photos/interior_photos/interior_008_source_024.jpg",
+      src: "photos/interior/interior_008_source_024.jpg",
       alt: "Два пудровых кресла у фактурной стены",
     },
     {
-      src: "photos/interior_photos/interior_009_source_033.jpg",
+      src: "photos/interior/interior_009_source_033.jpg",
       alt: "Посадка у витрин с мягкими креслами и столами",
     },
     {
-      src: "photos/interior_photos/interior_010_source_034.jpg",
+      src: "photos/interior/interior_010_source_034.jpg",
       alt: "Светлый столик и диван у стены с логотипом Brunch",
     },
     {
-      src: "photos/interior_photos/interior_016_source_057.jpg",
+      src: "photos/interior/interior_016_source_057.jpg",
       alt: "Уютный уголок с пудровыми стульями и настенным декором",
     },
   ];
